@@ -1,0 +1,25 @@
+<div class="container color-dark">
+  <div class="col">
+    <p>Un élément de liste</p>
+  </div>
+  <div class="col">
+    <p>Ma liste d'éléments ({{ nbItems }})</p>
+  </div>
+</div>
+
+<div class="container color-light">
+  <div class="col">
+    <p>Un nouvel élément de liste</p>
+    <form>
+      <input type="text" class="txt" name="objectifText" [(ngModel)]="objectifText">
+      <p>{{ objectifText }}</p>
+      <h3>Mon nouveau objectif</h3>
+      <input type="button" class="btn" [value]="btnText" (click)="ajoutItem()">
+    </form>
+  </div>
+  <div class="col">
+    @for (objectif of activiteService.objectifs; track $index) {
+      <p class="life-container animation-ajout" (click)="ouvrirDetail($index)">{{ objectif }}</p>
+    }
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="container">
+  <p><strong>Detail de l'activité:</strong></p>
+
+  @if (!modeEdition) {
+    <ol>
+      <li>Nom de l'activité: <strong>{{ activiteService.objectifs[index] }}</strong></li>
+    </ol>
+    <button class="btn btn-supprimer" (click)="supprimeElem(index)">Supprimer</button>
+    <button class="btn btn-action" (click)="activerEdition()">Modifier</button>
+    <button class="btn btn-retour" (click)="retour()">Retour</button>
+  } @else {
+    <ol>
+      <li>Nom de l'activité: <input type="text" class="txt" [(ngModel)]="titreEdition"></li>
+    </ol>
+    <button class="btn btn-supprimer" (click)="supprimeElem(index)">Supprimer</button>
+    <button class="btn btn-action" (click)="sauvegarder()">Sauvegarder</button>
+  }
+</div>

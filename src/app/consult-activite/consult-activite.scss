@@ -1,0 +1,44 @@
+.container {
+  background: #2B85C4;
+  padding: 1.3em;
+  color: white;
+  min-height: 200px;
+}
+
+ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+  padding-left: 1em;
+
+  li {
+    display: list-item;
+    margin-bottom: 0.3em;
+  }
+}
+
+input.txt {
+  border: 0;
+  padding: 0.5em;
+  width: 50%;
+}
+
+.btn {
+  border: 0;
+  padding: 0.8em 2em;
+  color: rgb(229, 239, 247);
+  margin-right: 0.5em;
+  margin-top: 1em;
+  cursor: pointer;
+}
+
+.btn-supprimer {
+  background: rgba(230, 35, 10, 0.726);
+}
+
+.btn-action {
+  background: #57B3F1;
+}
+
+.btn-retour {
+  background: #28a745;
+}
